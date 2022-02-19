@@ -17,4 +17,4 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git vssr https://github.com/jerrykuku/openwrt-package' >>feeds.conf.default
-echo 'src-git luci-app-poweroffdevice https://github.com/sirpdboy' >>feeds.conf.default
+echo 'src-git poweroff https://github.com/esirplayground/luci-app-poweroff' >>feeds.conf.default
