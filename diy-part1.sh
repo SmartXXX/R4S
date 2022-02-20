@@ -19,4 +19,4 @@ echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.co
 echo 'src-git vssr https://github.com/jerrykuku/openwrt-package' >>feeds.conf.default
 
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/uci-app-poweroff
-git clone https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns.git package/lean/uci-app-smartdns
+git clone https://github.com/281677160/openwrt-package/tree/master/feeds/luci/applications/luci-app-smartdns.git package/lean/uci-app-smartdns
