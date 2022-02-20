@@ -27,4 +27,4 @@ rm -rf packages/net/smartdns
 svn co https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
 
 # Add luci-app-smartdns & smartdns
-svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-smartdns feeds/luci/applications
+svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
