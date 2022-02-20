@@ -13,8 +13,8 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
 
-# Add a feed source
-svn co https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+# Add luci-app-poweroff
+svn co https://github.com/esirplayground/luci-app-poweroff package/lean/luci-app-poweroff
 
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
@@ -27,4 +27,4 @@ rm -rf packages/net/smartdns
 svn co https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
 
 # Add luci-app-smartdns & smartdns
-svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-smartdns package/luci-app-smartdns
+svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-smartdns package/lean/luci-app-smartdns
