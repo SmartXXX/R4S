@@ -18,8 +18,5 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git vssr https://github.com/jerrykuku/openwrt-package' >>feeds.conf.default
 
-# Add luci-app-poweroff
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
-
-# Add luci-app-smartdns & smartdns
-svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns
+git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/uci-app-poweroff
+git clone https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns.git package/lean/uci-app-smartdns
