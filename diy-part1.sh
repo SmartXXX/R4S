@@ -17,6 +17,5 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git vssr https://github.com/jerrykuku/openwrt-package' >>feeds.conf.default
-
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff.git package/lean/uci-app-poweroff
-git clone --depth=1 https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns package/lean/uci-app-smartdns
+echo 'src-git poweroff https://github.com/esirplayground/luci-app-poweroff.git' >>feeds.conf.default
+echo 'src-git smartdns https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns.git' >>feeds.conf.default
