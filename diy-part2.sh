@@ -16,15 +16,15 @@ sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generat
 # Add luci-app-poweroff
 svn co https://github.com/esirplayground/luci-app-poweroff package/lean/luci-app-poweroff
 
-# Add luci-theme-argon
-rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
+# Add luci-app-smartdns
+svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-smartdns package/lean/luci-app-smartdns
 
 # Replace smartdns with the official version
 rm -rf packages/net/smartdns
 svn co https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
 
-# Add luci-app-smartdns & smartdns
-svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
+# Add luci-theme-argon
+rm -rf package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
