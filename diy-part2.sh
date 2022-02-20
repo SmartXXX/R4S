@@ -15,8 +15,6 @@ sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generat
 
 # Add a feed source
 svn co https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
-svn co https://github.com/ujincn/smartdns package/smartdns
-svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-smartdns package/luci-app-smartdns
 
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
@@ -27,3 +25,6 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 # Replace smartdns with the official version
 rm -rf packages/net/smartdns
 svn co https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
+
+# Add luci-app-smartdns & smartdns
+svn co https://github.com/immortalwrt/luci/branches/openwrt-21.02/applications/luci-app-smartdns package/luci-app-smartdns
