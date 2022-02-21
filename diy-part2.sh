@@ -29,7 +29,3 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr.git package/lean/
 
 # Add luci-app-smartdns
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns package/lean/luci-app-smartdns
-
-# Replace smartdns with the official version
-rm -rf packages/net/smartdns 
-svn co https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
