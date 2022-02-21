@@ -23,6 +23,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 # Add luci-app-poweroff
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-poweroff package/lean/luci-app-poweroff
 
+# Add luci-app-vssr
+svn co https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
+
 # Add luci-app-smartdns
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns package/lean/luci-app-smartdns
 
