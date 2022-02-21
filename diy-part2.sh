@@ -17,9 +17,8 @@ sed -i '/uci commit system/i\uci set system.@system[0].hostname='SmartR4S''
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/' 
-
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-argon-config package/lean/luci-app-argon-config
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 
 # Add luci-app-poweroff
 svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-poweroff package/lean/luci-app-poweroff
@@ -30,5 +29,3 @@ svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/application
 # Replace smartdns with the official version
 rm -rf packages/net/smartdns 
 svn co https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
-
-feeds/luci/collections/luci/Makefile
