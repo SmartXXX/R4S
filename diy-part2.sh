@@ -19,20 +19,16 @@ rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' 
 
-git clone --depth=1 https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-argon-config package/lean/luci-app-argon-config
+svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-argon-config package/lean/luci-app-argon-config
 
 # Add luci-app-poweroff
-git clone --depth=1 https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-poweroff package/lean/luci-app-poweroff
+svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-poweroff package/lean/luci-app-poweroff
 
 # Add luci-app-smartdns
-git clone --depth=1 https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns package/lean/luci-app-smartdns
+svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-smartdns package/lean/luci-app-smartdns
 
 # Replace smartdns with the official version
-rm -rf packages/net/smartdns
-svn co https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
-
-feeds/luci/collections/luci/Makefile
-rm -rf packages/net/smartdns
+rm -rf packages/net/smartdns 
 svn co https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
 
 feeds/luci/collections/luci/Makefile
