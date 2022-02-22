@@ -12,7 +12,7 @@
 
 # Modify default IP & hostname
 sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
-sed -i '/uci commit system/i\uci set system.@system[0].hostname='SmartR4S''
+sed -i 's/OpenWrt/SmartR4S/g' package/base-files/files/bin/config_generate
 
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
