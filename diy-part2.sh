@@ -12,7 +12,10 @@
 
 # Modify default IP & hostname
 sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
-sed -i 's/OpenWrt/SmartR4S/g' package/base-files/files/bin/config_generate
+sed -i '/uci commit system/i\uci set system.@system[0].hostname='SmartR4S'' package/lean/default-settings/files/zzz-default-settings
+
+# 修改root密码
+#sed -i 's/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/root:Smart318/g' package/lean/default-settings/files/zzz-default-settings
 
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
