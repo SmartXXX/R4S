@@ -18,7 +18,7 @@ sed -i "s/OpenWrt /Smart R4S /g" package/lean/default-settings/files/zzz-default
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
+git clone --depth=1 https://github.com/spysir/luci-app-argon-config package/lean/luci-app-argon-config
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 
 # Add luci-app-poweroff
