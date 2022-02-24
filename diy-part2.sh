@@ -15,7 +15,7 @@ sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generat
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='SmartR4S'' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/OpenWrt /SmartR4S /g' package/lean/default-settings/files/zzz-default-settings
 
-# 添加防火墙规则
+# Add firewall rules
 echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> package/network/config/firewall/files/firewall.user
 
 # Add luci-theme-argon
