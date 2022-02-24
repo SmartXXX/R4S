@@ -16,7 +16,7 @@ sed -i '/uci commit system/i\uci set system.@system[0].hostname='Smart R4S'' pac
 sed -i "s/OpenWrt /Smart R4S /g" package/lean/default-settings/files/zzz-default-settings
 
 # 添加防火墙规则
-echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> /etc/firewall.user
+sed -i "echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> /etc/firewall.user" package/lean/default-settings/files/zzz-default-settings
 
 # Add luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-argon
