@@ -12,7 +12,7 @@
 
 # Modify default IP & hostname
 sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
-sed -i '/uci commit system/i\uci set system.@system[0].hostname='SmartR4S'' package/lean/default-settings/files/zzz-default-settings
+sed -i '/uci commit system/i\uci set system.@system[0].hostname='Smart R4S'' package/lean/default-settings/files/zzz-default-settings
 sed -i "s/OpenWrt /Smart R4S /g" package/lean/default-settings/files/zzz-default-settings
 
 # 添加防火墙规则
