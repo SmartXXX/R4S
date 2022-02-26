@@ -19,16 +19,6 @@ sed -i "s/CONFIG_DEFAULT_TARGET_OPTIMIZATION=\"-Os -pipe -mcpu=cortex-a53\"/CONF
 sed -i "s/CONFIG_CPU_TYPE=\"cortex-a53\"/CONFIG_CPU_TYPE=\"cortex-a72.cortex-a53\"/" .config
 sed -i "s/CONFIG_TARGET_OPTIMIZATION=\"-Os -pipe -mcpu=cortex-a53\"/CONFIG_TARGET_OPTIMIZATION=\"-O3 -pipe -march=armv8-a+crypto+crc -mcpu=cortex-a72.cortex-a53+crypto+crc -mtune=cortex-a72.cortex-a53\"/" .config
 
-# Modify FriendlyNanoPi
-shopt -s extglob
-rm -rf package/boot/uboot-rockchip target/linux/rockchip/patches-5.10/.svn
-svn export --force https://github.com/friendlyarm/friendlywrt/branches/master/package/boot/uboot-rockchip package/boot/uboot-rockchip
-svn export --force https://github.com/friendlyarm/friendlywrt/branches/master/target/linux/rockchip/armv8/base-files target/linux/rockchip/armv8/base-files
-curl -sfLo target/linux/rockchip/image/armv8.mk https://raw.githubusercontent.com/friendlyarm/friendlywrt/master/target/linux/rockchip/image/armv8.mk
-svn co https://github.com/friendlyarm/friendlywrt/branches/master/target/linux/rockchip/patches-5.10 target/linux/rockchip/patches-5.10
-rm -rf target/linux/rockchip/armv8/base-files/{etc/{uci-defaults/vendor.defaults,inittab,banner},root}
-sed -i 's/-mcpu=generic/-march=armv8-a+crypto+crc -mabi=lp64/g' include/target.mk
-
 # Fix libssh
 pushd feeds/packages/libs
 rm -rf libssh
