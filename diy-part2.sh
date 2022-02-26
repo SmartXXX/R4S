@@ -10,9 +10,6 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-rm -rf ./feeds/packages/utils/runc/Makefile
-svn export https://github.com/openwrt/packages/trunk/utils/runc/Makefile ./feeds/packages/utils/runc/Makefile
-
 # swap the network adapter driver to r8168 to gain better performance for r4s
 sed -i 's/r8169/r8168/' target/linux/rockchip/image/armv8.mk
 
