@@ -27,7 +27,7 @@ svn co https://github.com/openwrt/packages/trunk/libs/libssh
 popd
 
 # Modify default root password
-#sed -i 's/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/root:$1$epiUZfww$ifgJQjh3dsGb8GwihIdXm.:15723:0:99999:7:::/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/root:$1$epiUZfww$ifgJQjh3dsGb8GwihIdXm.:15723:0:99999:7:::/g' package/lean/default-settings/files/zzz-default-settings
 
 # Modify default IP & hostname
 sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
