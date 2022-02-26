@@ -27,7 +27,7 @@ svn export --force https://github.com/friendlyarm/friendlywrt/branches/master/ta
 curl -sfLo target/linux/rockchip/image/armv8.mk https://raw.githubusercontent.com/friendlyarm/friendlywrt/master/target/linux/rockchip/image/armv8.mk
 svn co https://github.com/friendlyarm/friendlywrt/branches/master/target/linux/rockchip/patches-5.10 target/linux/rockchip/patches-5.10
 rm -rf target/linux/rockchip/armv8/base-files/{etc/{uci-defaults/vendor.defaults,inittab,banner},root}
-sed -i 's,-mcpu=generic,-march=armv8-a+crypto+crc -mabi=lp64,g' include/target.mk
+sed -i 's/-mcpu=generic/-march=armv8-a+crypto+crc -mabi=lp64/g' include/target.mk
 
 # Fix libssh
 pushd feeds/packages/libs
