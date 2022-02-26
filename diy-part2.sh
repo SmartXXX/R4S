@@ -36,6 +36,7 @@ sed -i 's/OpenWrt /SmartR4S /g' package/lean/default-settings/files/zzz-default-
 
 # Add firewall rules
 echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> package/network/config/firewall/files/firewall.user
+sed -i 's/to-ports 53/to-ports 6153/g' package/network/config/firewall/files/firewall.user
 
 # Add luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-argon
