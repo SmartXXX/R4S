@@ -35,7 +35,7 @@ sed -i 's/\/bin\/login/\/bin\/login -f root/g' feeds/packages/utils/ttyd/files/t
 sed -i 's/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/root:$1$epiUZfww$ifgJQjh3dsGb8GwihIdXm.:15723:0:99999:7:::/g' package/lean/default-settings/files/zzz-default-settings
 
 # Modify default IP & hostname
-sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='SmartR4S'' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/OpenWrt /SmartR4S /g' package/lean/default-settings/files/zzz-default-settings
 
