@@ -41,9 +41,6 @@ sed -i 's/OpenWrt /SmartR4S /g' package/lean/default-settings/files/zzz-default-
 
 # Add firewall rules
 echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> package/network/config/firewall/files/firewall.user
-echo 'ip6tables -t nat -A POSTROUTING -o eth0 -j MASQUERADE' >> package/network/config/firewall/files/firewall.user
-echo 'ip6tables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT' >> package/network/config/firewall/files/firewall.user
-echo 'ip6tables -A FORWARD -i eth1 -j ACCEPT' >> package/network/config/firewall/files/firewall.user
 sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/default-settings/files/zzz-default-settings
 
 # Add luci-theme-argon
