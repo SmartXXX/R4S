@@ -64,4 +64,4 @@ rm -rf packages/net/smartdns
 svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
 
 # Add luci-app-smartdns
-svn export https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
