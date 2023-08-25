@@ -68,4 +68,4 @@ svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns
 
 # Replace files ERROR
 rm -rf package/boot/arm-trusted-firmware-rockchip-vendor
-svn export https://github.com/DHDAXCW/lede-rockchip/package/boot/arm-trusted-firmware-rockchip-vendor
+svn export https://github.com/DHDAXCW/lede-rockchip/trunk/package/boot/arm-trusted-firmware-rockchip-vendor
