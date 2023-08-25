@@ -65,3 +65,7 @@ svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/s
 
 # Add luci-app-smartdns
 svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+
+# Replace files ERROR
+rm -rf package/boot/arm-trusted-firmware-rockchip-vendor
+svn export https://github.com/DHDAXCW/lede-rockchip/package/boot/arm-trusted-firmware-rockchip-vendor
