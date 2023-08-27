@@ -67,14 +67,5 @@ svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/s
 svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
 # Replace files ERROR
-# rm -rf package/boot/arm-trusted-firmware-rockchip-vendor
-# svn export https://github.com/DHDAXCW/lede-rockchip/trunk/package/boot/arm-trusted-firmware-rockchip-vendor
-
-# 更换为 ImmortalWrt Uboot 以及 Target
-rm -rf ./target/linux/rockchip
-cp -rf ../immortalwrt_23/target/linux/rockchip ./target/linux/rockchip
-cp -rf ../PATCH/rockchip-5.15/* ./target/linux/rockchip/patches-5.15/
-rm -rf ./package/boot/uboot-rockchip
-cp -rf ../immortalwrt_23/package/boot/uboot-rockchip ./package/boot/uboot-rockchip
-rm -rf ./package/boot/arm-trusted-firmware-rockchip
-cp -rf ../immortalwrt_23/package/boot/arm-trusted-firmware-rockchip ./package/boot/arm-trusted-firmware-rockchi
+rm -rf package/boot/arm-trusted-firmware-rockchip-vendor
+svn export https://github.com/immortalwrt/trunk/package/boot/arm-trusted-firmware-rockchip-vendor
