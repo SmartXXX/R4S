@@ -63,12 +63,12 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr.git package/lean/
 
 # Replace smartdns with the official version
 rm -rf packages/net/smartdns
-# svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
-svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
+svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
+# svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
 
 # Add luci-app-smartdns
-svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
-# svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+# svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
 # Replace files ERROR
 # rm -rf package/boot/uboot-rockchip
