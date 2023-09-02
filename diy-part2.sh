@@ -71,8 +71,8 @@ svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
 # Replace files ERROR
-rm -rf package/boot/uboot-rockchip
-svn export https://github.com/DHDAXCW/lede-rockchip/trunk/package/boot/uboot-rockchip package/boot/uboot-rockchip
+# rm -rf package/boot/uboot-rockchip
+# svn export https://github.com/DHDAXCW/lede-rockchip/trunk/package/boot/uboot-rockchip package/boot/uboot-rockchip
 # svn export https://github.com/immortalwrt/immortalwrt/trunk/package/boot/uboot-rockchip package/boot/uboot-rockchip
 
 # 删除lede里的Makefile
