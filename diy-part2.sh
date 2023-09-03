@@ -67,8 +67,13 @@ svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/s
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
 
 # Add luci-app-smartdns
-# svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
-svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+# svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+
+svn export https://github.com/xiaorouji/openwrt-passwall/trunk/packages/pdnsd-alt package/lean/pdnsd-alt
+
+svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall package/lean/luci-app-passwall
+svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
 
 # Replace files ERROR
 # rm -rf package/boot/uboot-rockchip
