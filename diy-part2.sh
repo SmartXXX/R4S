@@ -74,6 +74,9 @@ svn export https://github.com/281677160/openwrt-package/trunk/luci-app-poweroff 
 
 svn export https://github.com/xiaorouji/openwrt-passwall/trunk/pdnsd-alt package/lean/pdnsd-alt
 
+rm -rf feeds/passwall/hysteria
+svn export https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria feeds/passwall/hysteria
+
 # svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall package/lean/luci-app-passwall
 # svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
 
