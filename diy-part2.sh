@@ -44,10 +44,14 @@ echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> package/network/c
 sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/default-settings/files/zzz-default-settings
 
 # Add luci-theme-argon
-rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
+rm -rf feeds/luci/themes/luci-theme-argon
+
+git clone https://github.com/kenzok8/openwrt-packages.git package/lean
+git clone https://github.com/kenzok8/small.git package/lean
+
+# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
 rm -rf package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 cp -f $GITHUB_WORKSPACE/bg1.jpg package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
@@ -58,22 +62,22 @@ svn export https://github.com/281677160/openwrt-package/trunk/luci-app-poweroff 
 # Add luci-app-vssr
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-vssr package/lean/luci-app-vssr
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
+# git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
 
 # Replace smartdns with the official version
-rm -rf packages/net/smartdns
-svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
+# rm -rf packages/net/smartdns
+# svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
 
 # Add luci-app-smartdns
-svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+# svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
 svn export https://github.com/xiaorouji/openwrt-passwall/trunk/packages/pdnsd-alt package/lean/pdnsd-alt
 
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall package/lean/luci-app-passwall
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall package/lean/luci-app-passwall
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
 
 # Replace files ERROR
 # rm -rf package/boot/uboot-rockchip
