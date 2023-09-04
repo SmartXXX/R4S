@@ -44,14 +44,14 @@ echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> package/network/c
 sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/default-settings/files/zzz-default-settings
 
 # Add luci-theme-argon
-# rm -rf package/lean/luci-theme-argon
-# rm -rf feeds/luci/themes/luci-theme-argon
-# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-# git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
-# rm -rf package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
-# cp -f $GITHUB_WORKSPACE/bg1.jpg package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
-rm -rf feeds/helloworld/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
-cp -f $GITHUB_WORKSPACE/bg1.jpg feeds/helloworld/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+rm -rf package/lean/luci-theme-argon
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/helloworld/luci-theme-argon
+rm -rf feeds/helloworld/luci-app-argon-config
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
+rm -rf package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+cp -f $GITHUB_WORKSPACE/bg1.jpg package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 
 # Add luci-app-poweroff
