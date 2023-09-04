@@ -45,6 +45,7 @@ sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/
 
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
+rm -rf package/lean/luci-app-argon-config
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/helloworld/luci-theme-argon
 rm -rf feeds/helloworld/luci-app-argon-config
@@ -87,5 +88,19 @@ svn export https://github.com/281677160/openwrt-package/trunk/luci-app-poweroff 
 
 # 删除lede里的Makefile
 # rm -rf target/linux/rockchip/Makefile
+
+echo '### CacULE ###'
+sed -i '/CONFIG_NR_CPUS/d' ./target/linux/rockchip/armv8/config-5.4
+echo '
+CONFIG_NR_CPUS=6
+' >> ./target/linux/rockchip/armv8/config-5.4
+echo '###  ###'
+
+echo '### UKSM ###'
+echo '
+CONFIG_KSM=y
+CONFIG_UKSM=y
+' >> ./target/linux/rockchip/armv8/config-5.4
+echo '###  ###'
 # 使用原openwrt中的Makefile
 # svn export https://github.com/openwrt/openwrt/trunk/target/linux/rockchip/Makefile target/linux/rockchip/Makefile
