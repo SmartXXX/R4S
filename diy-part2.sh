@@ -89,8 +89,6 @@ svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/s
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 svn co https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
-svn export https://github.com/xiaorouji/openwrt-passwall/trunk/pdnsd-alt package/lean/pdnsd-alt
-
 # Add luci-app-passwall
 # rm -rf feeds/passwall/hysteria
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria feeds/passwall/hysteria
@@ -99,6 +97,7 @@ svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 
 svn export https://github.com/sbwml/openwrt_helloworld/trunk/brook package/lean/brook
 svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-go package/lean/trojan-go
 svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-plus package/lean/trojan-plus
+svn export https://github.com/xiaorouji/openwrt-passwall/trunk/pdnsd-alt package/lean/pdnsd-alt
 
 # Replace files ERROR
 # rm -rf package/boot/uboot-rockchip
