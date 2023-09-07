@@ -111,3 +111,8 @@ svn export https://github.com/xiaorouji/openwrt-passwall/trunk/pdnsd-alt package
 
 # 使用原openwrt中的Makefile
 # svn export https://github.com/openwrt/openwrt/trunk/target/linux/rockchip/Makefile target/linux/rockchip/Makefile
+
+sed -i 's/CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client/^#\CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client/g' .config
+sed -i 's/CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server/^#\CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server/g' .config
+echo 'CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client=y' >> .config
+echo 'CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server=y' >> .config
