@@ -93,12 +93,12 @@ svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/luci-app-smartd
 # Add luci-app-passwall
 # rm -rf feeds/passwall/hysteria
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria feeds/passwall/hysteria
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall package/lean/luci-app-passwall
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/brook package/lean/brook
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-go package/lean/trojan-go
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-plus package/lean/trojan-plus
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/sing-box package/lean/sing-box
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall package/lean/luci-app-passwall
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/brook package/lean/brook
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-go package/lean/trojan-go
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-plus package/lean/trojan-plus
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/sing-box package/lean/sing-box
 svn export https://github.com/xiaorouji/openwrt-passwall/trunk/pdnsd-alt package/lean/pdnsd-alt
 
 # Replace files ERROR
