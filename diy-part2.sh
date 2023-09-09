@@ -73,38 +73,41 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 svn export https://github.com/281677160/openwrt-package/trunk/luci-app-poweroff package/lean/luci-app-poweroff
 
 # Add luci-app-vssr
-# git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
-# git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
+git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-vssr package/lean/luci-app-vssr
-svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr package/lean/luci-app-vssr
+# svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
+# svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr package/lean/luci-app-vssr
 
 # Replace smartdns with the official version
 rm -rf packages/net/smartdns
-# svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
-svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
+svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
+# svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
 # svn export https://github.com/281677160/openwrt-package/trunk/smartdns packages/net/smartdns
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
 
 # Add luci-app-smartdns
 # svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
-# svn export https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
-svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+svn export https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+# svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
 # Add luci-app-passwall
 # rm -rf feeds/passwall/hysteria
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria feeds/passwall/hysteria
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall package/lean/luci-app-passwall
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/brook package/lean/brook
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-go package/lean/trojan-go
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-plus package/lean/trojan-plus
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/sing-box package/lean/sing-box
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall package/lean/luci-app-passwall
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/brook package/lean/brook
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-go package/lean/trojan-go
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-plus package/lean/trojan-plus
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/sing-box package/lean/sing-box
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/pdnsd-alt package/lean/pdnsd-alt
-svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/pdnsd-alt package/lean/pdnsd-alt
+# svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/pdnsd-alt package/lean/pdnsd-alt
+git clone https://github.com/xiaorouji/openwrt-passwall feeds/passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 feeds/passwall2
+svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/lean/luci-app-passwall
 
 # Replace files ERROR
 # rm -rf package/boot/uboot-rockchip
