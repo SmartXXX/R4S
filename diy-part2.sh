@@ -99,10 +99,10 @@ svn export https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns 
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria feeds/passwall/hysteria
 # svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall package/lean/luci-app-passwall
 # svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
-# svn export https://github.com/sbwml/openwrt_helloworld/trunk/brook package/lean/brook
-# svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-go package/lean/trojan-go
-# svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-plus package/lean/trojan-plus
-# svn export https://github.com/sbwml/openwrt_helloworld/trunk/sing-box package/lean/sing-box
+svn export https://github.com/sbwml/openwrt_helloworld/trunk/brook package/lean/brook
+svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-go package/lean/trojan-go
+svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-plus package/lean/trojan-plus
+svn export https://github.com/sbwml/openwrt_helloworld/trunk/sing-box package/lean/sing-box
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/pdnsd-alt package/lean/pdnsd-alt
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/pdnsd-alt package/lean/pdnsd-alt
 git clone https://github.com/xiaorouji/openwrt-passwall feeds/passwall
@@ -120,7 +120,7 @@ svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-
 # 使用原openwrt中的Makefile
 # svn export https://github.com/openwrt/openwrt/trunk/target/linux/rockchip/Makefile target/linux/rockchip/Makefile
 
-sed -i "s/^[^#].*CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client$/#&/g" .config
-sed -i "s/^[^#].*CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server$/#&/g" .config
-echo 'CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client=y' >> .config
-echo 'CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server=y' >> .config
+# sed -i "s/^[^#].*CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client$/#&/g" .config
+# sed -i "s/^[^#].*CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server$/#&/g" .config
+# echo 'CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client=y' >> .config
+# echo 'CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server=y' >> .config
