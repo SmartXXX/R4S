@@ -81,8 +81,8 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr package/lean/luci-app-vssr
 
 # Replace smartdns with the official version
-rm -rf packages/net/smartdns
-svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
+# rm -rf packages/net/smartdns
+# svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
 # svn export https://github.com/281677160/openwrt-package/trunk/smartdns packages/net/smartdns
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
@@ -92,7 +92,7 @@ svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/s
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+# svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
 # Add luci-app-passwall
 # rm -rf feeds/passwall/hysteria
