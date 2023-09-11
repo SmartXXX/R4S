@@ -53,9 +53,18 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='SmartR4S'' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/OpenWrt /SmartR4S /g' package/lean/default-settings/files/zzz-default-settings
 
+# 禁用ipv6前缀
+sed -i 's/^[^#].*option ula/#&/' /etc/config/network
+
 # Add firewall rules
 echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> package/network/config/firewall/files/firewall.user
 sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/default-settings/files/zzz-default-settings
+
+# Add Lienol's Packages
+git clone --depth=1 https://github.com/Lienol/openwrt-package feeds/lienol
+rm -rf feeds/luci/applications/luci-app-kodexplorer
+rm -rf feeds/lienol/verysync
+rm -rf feeds/lienol/luci-app-verysync
 
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
@@ -81,8 +90,8 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr package/lean/luci-app-vssr
 
 # Replace smartdns with the official version
-rm -rf packages/net/smartdns
-svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
+# rm -rf packages/net/smartdns
+# svn export https://github.com/openwrt/packages/trunk/net/smartdns packages/net/smartdns
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
 # svn export https://github.com/281677160/openwrt-package/trunk/smartdns packages/net/smartdns
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/openwrt-smartdns packages/net/smartdns
