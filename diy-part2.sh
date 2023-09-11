@@ -61,7 +61,7 @@ echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> package/network/c
 sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/default-settings/files/zzz-default-settings
 
 # Add Lienol's Packages
-git clone --depth=1 https://github.com/Lienol/openwrt-package feeds/lienol
+# git clone --depth=1 https://github.com/Lienol/openwrt-package feeds/lienol
 rm -rf feeds/luci/applications/luci-app-kodexplorer
 rm -rf feeds/lienol/verysync
 rm -rf feeds/lienol/luci-app-verysync
