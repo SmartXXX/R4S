@@ -19,4 +19,14 @@
 # echo 'src-git helloworld https://github.com/sbwml/openwrt_helloworld.git' >>feeds.conf.default
 # echo 'src-git helloworld https://github.com/kenzok8/openwrt-packages.git' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/kenzok8/small.git' >>feeds.conf.default
-# echo 'src-git lienol https://github.com/Lienol/openwrt-package' >>feeds.conf.default
+echo 'src-git lienol https://github.com/Lienol/openwrt-package' >>feeds.conf.default
+
+svn export https://github.com/ysx88/openwrt-packages/trunk/openwrt-passwall-packages feeds/passwall
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall feeds/passwall/luci-app-passwall
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall2 feeds/passwall/luci-app-passwall2
+
+svn export https://github.com/ysx88/openwrt-packages/trunk/helloworld feeds/helloworld
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-ssr-plus feeds/helloworld/luci-app-ssr-plus
+
+svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb feeds/vssr/lua-maxminddb
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr feeds/vssr/luci-app-vssr
