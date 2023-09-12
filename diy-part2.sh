@@ -54,14 +54,14 @@ sed -i '/uci commit system/i\uci set system.@system[0].hostname='SmartR4S'' pack
 sed -i 's/OpenWrt /SmartR4S /g' package/lean/default-settings/files/zzz-default-settings
 
 # 禁用ipv6前缀
-# sed -i 's/^[^#].*option ula/#&/' package/base-files/files/etc/config/network
+sed -i 's/^[^#].*option ula/#&/' package/base-files/files/etc/config/network
 
 # Add firewall rules
 echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> package/network/config/firewall/files/firewall.user
 sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/default-settings/files/zzz-default-settings
 
 # Add Lienol's Packages
-# git clone --depth=1 https://github.com/Lienol/openwrt-package feeds/lienol
+git clone --depth=1 https://github.com/Lienol/openwrt-package feeds/lienol
 rm -rf feeds/luci/applications/luci-app-kodexplorer
 rm -rf feeds/lienol/verysync
 rm -rf feeds/lienol/luci-app-verysync
@@ -70,8 +70,8 @@ rm -rf feeds/lienol/luci-app-verysync
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-argon-config
 rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/helloworld/luci-theme-argon
-rm -rf feeds/helloworld/luci-app-argon-config
+# rm -rf feeds/helloworld/luci-theme-argon
+# rm -rf feeds/helloworld/luci-app-argon-config
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
 rm -rf package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
@@ -79,15 +79,8 @@ cp -f $GITHUB_WORKSPACE/bg1.jpg package/lean/luci-theme-argon/htdocs/luci-static
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 
 # Add luci-app-poweroff
-svn export https://github.com/281677160/openwrt-package/trunk/luci-app-poweroff package/lean/luci-app-poweroff
-
-# Add luci-app-vssr
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
-# svn export https://github.com/kenzok8/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
-# svn export https://github.com/281677160/openwrt-package/trunk/luci-app-vssr package/lean/luci-app-vssr
-# svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
-# svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr package/lean/luci-app-vssr
+# svn export https://github.com/281677160/openwrt-package/trunk/luci-app-poweroff package/lean/luci-app-poweroff
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-poweroff package/lean/luci-app-poweroff
 
 # Replace smartdns with the official version
 # rm -rf packages/net/smartdns
@@ -109,15 +102,31 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns pac
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria feeds/passwall/hysteria
 # svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall package/lean/luci-app-passwall
 # svn export https://github.com/sbwml/openwrt_helloworld/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/brook package/lean/brook
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-go package/lean/trojan-go
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-plus package/lean/trojan-plus
-svn export https://github.com/sbwml/openwrt_helloworld/trunk/sing-box package/lean/sing-box
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/brook package/lean/brook
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-go package/lean/trojan-go
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/trojan-plus package/lean/trojan-plus
+# svn export https://github.com/sbwml/openwrt_helloworld/trunk/sing-box package/lean/sing-box
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/pdnsd-alt package/lean/pdnsd-alt
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/pdnsd-alt package/lean/pdnsd-alt
-git clone https://github.com/xiaorouji/openwrt-passwall feeds/passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 feeds/passwall2
-svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/lean/luci-app-passwall
+# git clone https://github.com/xiaorouji/openwrt-passwall feeds/passwall
+# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 feeds/passwall2
+# svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/lean/luci-app-passwall
+svn export https://github.com/ysx88/openwrt-packages/trunk/openwrt-passwall-packages feeds/passwall
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall feeds/passwall/luci-app-passwall
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall2 feeds/passwall/luci-app-passwall2
+
+# Add luci-app-ssr-plus
+# rm -rf feeds/helloworld/luci-app-ssr-plus
+svn export https://github.com/ysx88/openwrt-packages/trunk/helloworld feeds/helloworld
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-ssr-plus feeds/helloworld/luci-app-ssr-plus
+
+# Add luci-app-vssr
+# git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
+# svn export https://github.com/kenzok8/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
+# svn export https://github.com/281677160/openwrt-package/trunk/luci-app-vssr package/lean/luci-app-vssr
+svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb feeds/vssr/lua-maxminddb
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr feeds/vssr/luci-app-vssr
 
 # Replace files ERROR
 # rm -rf package/boot/uboot-rockchip
@@ -130,7 +139,7 @@ svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-
 # 使用原openwrt中的Makefile
 # svn export https://github.com/openwrt/openwrt/trunk/target/linux/rockchip/Makefile target/linux/rockchip/Makefile
 
-sed -i "s/^[^#].*CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client$/#&/g" .config
-sed -i "s/^[^#].*CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server$/#&/g" .config
-echo 'CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client=y' >> .config
-echo 'CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server=y' >> .config
+# sed -i "s/^[^#].*CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client$/#&/g" .config
+# sed -i "s/^[^#].*CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server$/#&/g" .config
+# echo 'CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client=y' >> .config
+# echo 'CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server=y' >> .config
