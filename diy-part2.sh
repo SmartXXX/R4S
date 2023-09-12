@@ -60,8 +60,7 @@ sed -i 's/OpenWrt /SmartR4S /g' package/lean/default-settings/files/zzz-default-
 echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> package/network/config/firewall/files/firewall.user
 sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/default-settings/files/zzz-default-settings
 
-# Add Lienol's Packages
-git clone --depth=1 https://github.com/Lienol/openwrt-package feeds/lienol
+# modify Lienol's Packages
 rm -rf feeds/luci/applications/luci-app-kodexplorer
 rm -rf feeds/lienol/verysync
 rm -rf feeds/lienol/luci-app-verysync
@@ -111,22 +110,15 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns pac
 # git clone https://github.com/xiaorouji/openwrt-passwall feeds/passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 feeds/passwall2
 # svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/lean/luci-app-passwall
-svn export https://github.com/ysx88/openwrt-packages/trunk/openwrt-passwall-packages feeds/passwall
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall feeds/passwall/luci-app-passwall
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall2 feeds/passwall/luci-app-passwall2
 
 # Add luci-app-ssr-plus
 # rm -rf feeds/helloworld/luci-app-ssr-plus
-svn export https://github.com/ysx88/openwrt-packages/trunk/helloworld feeds/helloworld
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-ssr-plus feeds/helloworld/luci-app-ssr-plus
 
 # Add luci-app-vssr
 # git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 # git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-vssr package/lean/luci-app-vssr
-svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb feeds/vssr/lua-maxminddb
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr feeds/vssr/luci-app-vssr
 
 # Replace files ERROR
 # rm -rf package/boot/uboot-rockchip
