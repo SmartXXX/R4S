@@ -110,13 +110,14 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns pac
 # git clone https://github.com/xiaorouji/openwrt-passwall feeds/passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 feeds/passwall2
 # svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/lean/luci-app-passwall
-svn export https://github.com/ysx88/openwrt-packages/trunk/openwrt-passwall-packages feeds/lienol
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall feeds/lienol/luci-app-passwall
+svn export https://github.com/ysx88/openwrt-packages/trunk/openwrt-passwall feeds/lienol
+# svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall feeds/lienol/luci-app-passwall
+svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall feeds/lienol/luci-app-passwall
 svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall2 feeds/lienol/luci-app-passwall2
 
 # Add luci-app-ssr-plus
 # rm -rf feeds/helloworld/luci-app-ssr-plus
-svn export https://github.com/ysx88/openwrt-packages/trunk/helloworld feeds/lienol
+svn export --force https://github.com/ysx88/openwrt-packages/trunk/helloworld feeds/lienol
 svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-ssr-plus feeds/lienol/luci-app-ssr-plus
 
 # Add luci-app-vssr
