@@ -110,23 +110,23 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns pac
 # git clone https://github.com/xiaorouji/openwrt-passwall feeds/passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 feeds/passwall2
 # svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/lean/luci-app-passwall
-svn export --force https://github.com/ysx88/openwrt-packages/trunk/openwrt-passwall feeds/lienol
+svn export --force https://github.com/ysx88/openwrt-packages/trunk/openwrt-passwall package/lean
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall feeds/lienol/luci-app-passwall
-svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall feeds/lienol/luci-app-passwall
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall2 feeds/lienol/luci-app-passwall2
+svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/lean/luci-app-passwall
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
 
 # Add luci-app-ssr-plus
 # rm -rf feeds/helloworld/luci-app-ssr-plus
-svn export --force https://github.com/ysx88/openwrt-packages/trunk/helloworld feeds/lienol
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-ssr-plus feeds/lienol/luci-app-ssr-plus
+svn export --force https://github.com/ysx88/openwrt-packages/trunk/helloworld package/lean
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-ssr-plus package/lean/luci-app-ssr-plus
 
 # Add luci-app-vssr
 # git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 # git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-vssr package/lean/luci-app-vssr
-svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb feeds/lienol/lua-maxminddb
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr feeds/lienol/luci-app-vssr
+svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr package/lean/luci-app-vssr
 
 # Replace files ERROR
 # rm -rf package/boot/uboot-rockchip
