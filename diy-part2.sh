@@ -117,8 +117,8 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall2 pa
 
 # Add luci-app-ssr-plus
 # rm -rf feeds/helloworld/luci-app-ssr-plus
-svn export --force https://github.com/ysx88/openwrt-packages/trunk/helloworld package/lean
-svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-ssr-plus package/lean/luci-app-ssr-plus
+# svn export --force https://github.com/ysx88/openwrt-packages/trunk/helloworld package/lean
+# svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-ssr-plus package/lean/luci-app-ssr-plus
 
 # Add luci-app-vssr
 # git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
