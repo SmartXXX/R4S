@@ -15,7 +15,7 @@ chmod -R 755 files
 # swap the network adapter driver to r8168 to gain better performance for r4s
 sed -i 's/r8169/r8168/' target/linux/rockchip/image/armv8.mk
 git clone -b master --depth 1 https://github.com/BROBIRD/openwrt-r8168.git package/new/r8168
-git am --signoff < $GITHUB_WORKSPACE/patches/r8168/r8168-fix_LAN_led-for_r4s-from_TL.patch
+patch -p0 < $GITHUB_WORKSPACE/patches/r8168/r8168-fix_LAN_led-for_r4s-from_TL.patch
 
 echo '### CacULE ###'
 sed -i '/CONFIG_NR_CPUS/d' ./target/linux/rockchip/armv8/config-5.4
@@ -29,7 +29,7 @@ echo '
 CONFIG_KSM=y
 CONFIG_UKSM=y
 ' >> ./target/linux/rockchip/armv8/config-5.4
-git am --signoff < $GITHUB_WORKSPACE/patches/UKSM/695-uksm-5.4.patch
+patch -p0 < $GITHUB_WORKSPACE/patches/UKSM/695-uksm-5.4.patch
 echo '###  ###'
 
 # Modify config
