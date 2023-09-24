@@ -29,6 +29,7 @@ echo '
 CONFIG_KSM=y
 CONFIG_UKSM=y
 ' >> ./target/linux/rockchip/armv8/config-5.4
+patch -p1 <../patches/UKSM/695-uksm-5.4.patch
 echo '###  ###'
 
 # Modify config
