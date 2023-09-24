@@ -94,6 +94,7 @@ rm -rf feeds/luci/applications/luci-app-smartdns
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+# git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
 # Add luci-app-passwall
