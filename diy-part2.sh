@@ -59,6 +59,10 @@ sed -i 's/OpenWrt /SmartR4S /g' package/lean/default-settings/files/zzz-default-
 
 # Add firewall rules
 echo 'iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE' >> package/network/config/firewall/files/firewall.user
+echo 'iptables -t nat -I PREROUTING -i pppoe-wan -p tcp --dport 5001 -j DNAT --to-destination 192.168.6.6:5001' >> package/network/config/firewall/files/firewall.user
+echo 'iptables -t nat -I PREROUTING -i pppoe-wan -p tcp --dport 6690 -j DNAT --to-destination 192.168.6.6:6690' >> package/network/config/firewall/files/firewall.user
+echo 'iptables -t nat -I PREROUTING -i pppoe-wan -p tcp --dport 8085 -j DNAT --to-destination 192.168.6.6:8085' >> package/network/config/firewall/files/firewall.user
+echo 'iptables -t nat -I PREROUTING -i pppoe-wan -p tcp --dport 5006 -j DNAT --to-destination 192.168.6.6:5006' >> package/network/config/firewall/files/firewall.user
 sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/default-settings/files/zzz-default-settings
 
 # modify Lienol's Packages
