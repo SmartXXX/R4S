@@ -127,8 +127,8 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns pac
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-ssr-plus package/lean/luci-app-ssr-plus
 
 # Add luci-app-vssr
-# git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
-# git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
+git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-vssr package/lean/luci-app-vssr
 # svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
