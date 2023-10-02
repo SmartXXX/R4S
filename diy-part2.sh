@@ -131,8 +131,8 @@ svn export --force https://github.com/ysx88/openwrt-packages/trunk/openwrt-passw
 # git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-vssr package/lean/luci-app-vssr
-# svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
-# svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr package/lean/luci-app-vssr
+svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr package/lean/luci-app-vssr
 
 # Replace files ERROR
 # rm -rf package/boot/uboot-rockchip
