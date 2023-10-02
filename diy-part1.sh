@@ -20,5 +20,7 @@
 # echo 'src-git helloworld https://github.com/kenzok8/openwrt-packages.git' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/kenzok8/small.git' >>feeds.conf.default
 echo 'src-git lienol https://github.com/Lienol/openwrt-package' >>feeds.conf.default
-echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' >>feeds.conf.default
-echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git;main' >>feeds.conf.default
+# echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' >>feeds.conf.default
+# echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git;main' >>feeds.conf.default
+echo 'src-git vssr_packages https://github.com/jerrykuku/lua-maxminddb.git;main' >>feeds.conf.default
+echo 'src-git vssr https://github.com/jerrykuku/luci-app-vssr.git;main' >>feeds.conf.default
