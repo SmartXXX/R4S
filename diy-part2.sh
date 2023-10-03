@@ -118,8 +118,6 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns pac
 # svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/lean/luci-app-passwall
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall feeds/lienol/luci-app-passwall
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/lean/luci-app-passwall
-rm -rf feeds/packages/lang/golang
-svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang feeds/packages/lang/golang
 svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
 svn export --force https://github.com/ysx88/openwrt-packages/trunk/openwrt-passwall package/lean
 
