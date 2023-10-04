@@ -74,9 +74,9 @@ rm -rf package/feeds/lienol/verysync
 rm -rf package/feeds/lienol/luci-app-verysync
 
 # modify small's Packages
-rm -rf package/feeds/small/luci-app-bypass
-rm -rf package/feeds/small/luci-app-ssr-plus
-svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/feeds/small/lua-maxminddb
+# rm -rf package/feeds/small/luci-app-bypass
+# rm -rf package/feeds/small/luci-app-ssr-plus
+# svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/feeds/small/lua-maxminddb
 
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
@@ -104,6 +104,7 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-poweroff pac
 
 # Add luci-app-smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
+rm -rf package/feeds/luci/applications/luci-app-smartdns
 # svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
@@ -140,8 +141,8 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns pac
 # git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-vssr package/lean/luci-app-vssr
-# svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
-# svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr package/lean/luci-app-vssr
+svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/lean/lua-maxminddb
+svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-vssr package/lean/luci-app-vssr
 
 # Replace files ERROR
 # rm -rf package/boot/uboot-rockchip
