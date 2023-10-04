@@ -72,6 +72,7 @@ rm -rf feeds/lienol/luci-app-verysync
 
 # modify small's Packages
 rm -rf feeds/small/luci-app-bypass
+rm -rf feeds/small/luci-app-ssr-plus
 svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb feeds/small/lua-maxminddb
 
 # Add luci-theme-argon
