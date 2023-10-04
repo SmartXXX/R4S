@@ -69,16 +69,20 @@ sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/
 rm -rf feeds/luci/applications/luci-app-kodexplorer
 rm -rf feeds/lienol/verysync
 rm -rf feeds/lienol/luci-app-verysync
+rm -rf package/feeds/luci/applications/luci-app-kodexplorer
+rm -rf package/feeds/lienol/verysync
+rm -rf package/feeds/lienol/luci-app-verysync
 
 # modify small's Packages
-rm -rf feeds/small/luci-app-bypass
-rm -rf feeds/small/luci-app-ssr-plus
-svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb feeds/small/lua-maxminddb
+rm -rf package/feeds/small/luci-app-bypass
+rm -rf package/feeds/small/luci-app-ssr-plus
+svn export https://github.com/ysx88/openwrt-packages/trunk/lua-maxminddb package/feeds/small/lua-maxminddb
 
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-argon-config
 rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf package/feeds/luci/themes/luci-theme-argon
 # rm -rf feeds/helloworld/luci-theme-argon
 # rm -rf feeds/helloworld/luci-app-argon-config
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
