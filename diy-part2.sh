@@ -69,9 +69,6 @@ sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/
 rm -rf feeds/luci/applications/luci-app-kodexplorer
 rm -rf feeds/lienol/verysync
 rm -rf feeds/lienol/luci-app-verysync
-rm -rf package/feeds/luci/applications/luci-app-kodexplorer
-rm -rf package/feeds/lienol/verysync
-rm -rf package/feeds/lienol/luci-app-verysync
 
 # modify small's Packages
 # rm -rf package/feeds/small/luci-app-bypass
@@ -80,9 +77,7 @@ rm -rf package/feeds/lienol/luci-app-verysync
 
 # Add luci-theme-argon
 rm -rf package/lean/luci-theme-argon
-rm -rf package/lean/luci-app-argon-config
 rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf package/feeds/luci/themes/luci-theme-argon
 # rm -rf feeds/helloworld/luci-theme-argon
 # rm -rf feeds/helloworld/luci-app-argon-config
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
@@ -104,7 +99,6 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-poweroff pac
 
 # Add luci-app-smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
-rm -rf package/feeds/luci/applications/luci-app-smartdns
 # svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
@@ -130,8 +124,8 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns pac
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/lean/luci-app-passwall
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
 # svn export --force https://github.com/ysx88/openwrt-packages/trunk/openwrt-passwall package/lean
-rm -rf package/feeds/passwall_packages/v2ray-plugin
-svn export https://github.com/immortalwrt/packages/trunk/net/v2ray-plugin package/feeds/passwall_packages/v2ray-plugin
+rm -rf feeds/passwall_packages/v2ray-plugin
+svn export https://github.com/immortalwrt/packages/trunk/net/v2ray-plugin feeds/passwall_packages/v2ray-plugin
 
 # Add luci-app-ssr-plus
 # rm -rf feeds/helloworld/luci-app-ssr-plus
