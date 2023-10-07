@@ -124,12 +124,10 @@ svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns pac
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/lean/luci-app-passwall
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-passwall2 package/lean/luci-app-passwall2
 # svn export --force https://github.com/ysx88/openwrt-packages/trunk/openwrt-passwall package/lean
-# rm -rf feeds/passwall_packages/v2ray-plugin
-# svn export https://github.com/kenzok8/small/trunk/v2ray-plugin feeds/passwall_packages/v2ray-plugin
-rm -rf feeds/small/luci-app-bypass
-rm -rf feeds/small/luci-app-ssr-plus
-rm -rf feeds/small/luci-app-passwall
-rm -rf feeds/small/luci-app-vssr
+# rm -rf feeds/small/luci-app-bypass
+# rm -rf feeds/small/luci-app-ssr-plus
+# rm -rf feeds/small/luci-app-passwall
+# rm -rf feeds/small/luci-app-vssr
 
 # Add luci-app-ssr-plus
 # rm -rf feeds/helloworld/luci-app-ssr-plus
