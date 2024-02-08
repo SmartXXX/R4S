@@ -93,7 +93,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 
 git clone https://github.com/281677160/openwrt-package.git
 cd openwrt-package
-git checkout lede
+git checkout Lede
 cp -r luci-app-poweroff ../package/lean/luci-app-poweroff
 
 # Replace smartdns with the official version
