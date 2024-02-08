@@ -50,11 +50,11 @@ cp -r temp-repo/libs/libssh feeds/packages/libs/libssh
 rm -rf temp-repo
 
 # Fix apk
-rm -rf feeds/packages/utils/apk
-mkdir -p feeds/packages/utils/apk
-git clone --depth  1 --branch master https://github.com/openwrt/packages.git temp-repo
-cp -r temp-repo/utils/apk feeds/packages/utils/apk
-rm -rf temp-repo
+# rm -rf feeds/packages/utils/apk
+# mkdir -p feeds/packages/utils/apk
+# git clone --depth  1 --branch master https://github.com/openwrt/packages.git temp-repo
+# cp -r temp-repo/utils/apk feeds/packages/utils/apk
+# rm -rf temp-repo
 
 # no need for password on ttyd
 sed -i 's/\/bin\/login/\/bin\/login -f root/g' feeds/packages/utils/ttyd/files/ttyd.config
