@@ -92,8 +92,8 @@ git clone -b lede https://github.com/281677160/openwrt-package/luci-app-poweroff
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-poweroff package/lean/luci-app-poweroff
 
 # git clone https://github.com/281677160/openwrt-package.git
-# cd openwrt-packages
-# git checkout master
+# cd openwrt-package
+# git checkout lede
 # cp -r luci-app-poweroff ../package/lean/luci-app-poweroff
 
 # Replace smartdns with the official version
