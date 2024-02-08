@@ -87,8 +87,14 @@ cp -f $GITHUB_WORKSPACE/bg1.jpg package/lean/luci-theme-argon/htdocs/luci-static
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 
 # Add luci-app-poweroff
-svn export https://github.com/281677160/openwrt-package/trunk/luci-app-poweroff package/lean/luci-app-poweroff
+# svn export https://github.com/281677160/openwrt-package/trunk/luci-app-poweroff package/lean/luci-app-poweroff
+# git clone -b lede https://github.com/281677160/openwrt-package/luci-app-poweroff package/lean/luci-app-poweroff
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-poweroff package/lean/luci-app-poweroff
+
+git clone https://github.com/281677160/openwrt-package.git
+cd openwrt-packages
+git checkout master
+cp -r luci-app-poweroff ../package/lean/luci-app-poweroff
 
 # Replace smartdns with the official version
 # rm -rf packages/net/smartdns
@@ -100,11 +106,16 @@ svn export https://github.com/281677160/openwrt-package/trunk/luci-app-poweroff 
 # Add luci-app-smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
 # svn export https://github.com/liuran001/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
-svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+# svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/mrzhaohanhua/openwrt-package/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 # git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
+
+git clone https://github.com/kenzok8/openwrt-packages.git
+cd openwrt-packages
+git checkout master
+cp -r luci-app-smartdns ../package/lean/luci-app-smartdns
 
 # Add luci-app-passwall
 # rm -rf feeds/passwall/hysteria
