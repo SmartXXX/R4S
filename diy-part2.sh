@@ -42,6 +42,9 @@ sed -i "s/CONFIG_TARGET_OPTIMIZATION=\"-Os -pipe -mcpu=cortex-a53\"/CONFIG_TARGE
 # rm -rf libssh
 # svn export https://github.com/openwrt/packages/trunk/libs/libssh
 # popd
+rm -rf feeds/packages/libs/libssh
+mkdir -p feeds/packages/libs/libssh
+git archive --remote=https://github.com/openwrt/packages.git HEAD:libs/libssh | tar -x -C feeds/packages/libs/libssh
 
 # no need for password on ttyd
 sed -i 's/\/bin\/login/\/bin\/login -f root/g' feeds/packages/utils/ttyd/files/ttyd.config
@@ -91,9 +94,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 # git clone -b lede https://github.com/281677160/openwrt-package/luci-app-poweroff package/lean/luci-app-poweroff
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-poweroff package/lean/luci-app-poweroff
 
-git clone --depth  1 --branch Lede https://github.com/281677160/openwrt-package.git temp-repo
-mkdir -p package/lean/luci-app-poweroff && cp -r temp-repo/luci-app-poweroff package/lean/luci-app-poweroff
-rm -rf temp-repo
+mkdir -p package/lean/luci-app-poweroff
+git archive --remote=https://github.com/281677160/openwrt-package.git Lede:luci-app-poweroff | tar -x -C package/lean/luci-app-poweroff
 
 # Replace smartdns with the official version
 # rm -rf packages/net/smartdns
@@ -111,9 +113,12 @@ rm -rf feeds/luci/applications/luci-app-smartdns
 # git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
-git clone --depth  1 --branch master https://github.com/kenzok8/openwrt-packages.git temp-repo
-mkdir -p package/lean/luci-app-smartdns && cp -r temp-repo/luci-app-smartdns package/lean/luci-app-smartdns
-rm -rf temp-repo
+# git clone --depth  1 --branch master https://github.com/kenzok8/openwrt-packages.git temp-repo
+# mkdir -p package/lean/luci-app-smartdns && cp -r temp-repo/luci-app-smartdns package/lean/luci-app-smartdns
+# rm -rf temp-repo
+
+mkdir -p package/lean/luci-app-smartdns
+git archive --remote=https://github.com/kenzok8/openwrt-packages.git HEAD:luci-app-smartdns | tar -x -C package/lean/luci-app-smartdns
 
 # Add luci-app-passwall
 # rm -rf feeds/passwall/hysteria
