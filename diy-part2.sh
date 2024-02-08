@@ -43,11 +43,11 @@ sed -i "s/CONFIG_TARGET_OPTIMIZATION=\"-Os -pipe -mcpu=cortex-a53\"/CONFIG_TARGE
 # svn export https://github.com/openwrt/packages/trunk/libs/libssh
 # popd
 
-rm -rf feeds/packages/libs/libssh
-mkdir -p feeds/packages/libs/libssh
-git clone --depth  1 --branch master https://github.com/openwrt/packages.git temp-repo
-cp -r temp-repo/libs/libssh feeds/packages/libs/libssh
-rm -rf temp-repo
+# rm -rf feeds/packages/libs/libssh
+# mkdir -p feeds/packages/libs/libssh
+# git clone --depth  1 --branch master https://github.com/openwrt/packages.git temp-repo
+# cp -r temp-repo/libs/libssh feeds/packages/libs/libssh
+# rm -rf temp-repo
 
 # Fix apk
 # rm -rf feeds/packages/utils/apk
