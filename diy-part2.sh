@@ -91,10 +91,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 # git clone -b lede https://github.com/281677160/openwrt-package/luci-app-poweroff package/lean/luci-app-poweroff
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-poweroff package/lean/luci-app-poweroff
 
-git clone https://github.com/281677160/openwrt-package.git
-cd openwrt-package
-git checkout Lede
-cp -r -f luci-app-poweroff ../package/lean/luci-app-poweroff
+git clone --depth  1 --branch Lede https://github.com/281677160/openwrt-package.git temp-repo
+mkdir -p package/lean/luci-app-poweroff && cp -r temp-repo/luci-app-poweroff package/lean/luci-app-poweroff
+rm -rf temp-repo
 
 # Replace smartdns with the official version
 # rm -rf packages/net/smartdns
@@ -112,10 +111,9 @@ rm -rf feeds/luci/applications/luci-app-smartdns
 # git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
-git clone https://github.com/kenzok8/openwrt-packages.git
-cd openwrt-packages
-git checkout master
-cp -r -f luci-app-smartdns ../package/lean/luci-app-smartdns
+git clone --depth  1 --branch master https://github.com/kenzok8/openwrt-packages.git temp-repo
+mkdir -p package/lean/luci-app-smartdns && cp -r temp-repo/luci-app-smartdns package/lean/luci-app-smartdns
+rm -rf temp-repo
 
 # Add luci-app-passwall
 # rm -rf feeds/passwall/hysteria
