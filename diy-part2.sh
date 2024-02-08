@@ -42,10 +42,11 @@ sed -i "s/CONFIG_TARGET_OPTIMIZATION=\"-Os -pipe -mcpu=cortex-a53\"/CONFIG_TARGE
 # rm -rf libssh
 # svn export https://github.com/openwrt/packages/trunk/libs/libssh
 # popd
-rm -rf feeds/packages/libs/libssh
-git clone --depth  1 --branch master https://github.com/openwrt/packages.git temp-repo
-mkdir -p feeds/packages/libs/libssh && cp -r temp-repo/libs/libssh feeds/packages/libs/libssh
-rm -rf temp-repo
+
+# rm -rf feeds/packages/libs/libssh
+# git clone --depth  1 --branch master https://github.com/openwrt/packages.git temp-repo
+# mkdir -p feeds/packages/libs/libssh && cp -r temp-repo/libs/libssh feeds/packages/libs/libssh
+# rm -rf temp-repo
 
 # no need for password on ttyd
 sed -i 's/\/bin\/login/\/bin\/login -f root/g' feeds/packages/utils/ttyd/files/ttyd.config
