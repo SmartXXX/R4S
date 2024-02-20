@@ -86,9 +86,9 @@ echo 'iptables -t nat -I PREROUTING -i pppoe-wan -p tcp --dport 9080 -j DNAT --t
 sed -i 's/-j REDIRECT --to-ports 53/-j REDIRECT --to-ports 6153/g' package/lean/default-settings/files/zzz-default-settings
 
 # modify Lienol's Packages
-rm -rf feeds/luci/applications/luci-app-kodexplorer
-rm -rf feeds/lienol/verysync
-rm -rf feeds/lienol/luci-app-verysync
+# rm -rf feeds/luci/applications/luci-app-kodexplorer
+# rm -rf feeds/lienol/verysync
+# rm -rf feeds/lienol/luci-app-verysync
 
 # modify small's Packages
 # rm -rf package/feeds/small/luci-app-bypass
