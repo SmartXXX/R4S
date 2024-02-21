@@ -44,7 +44,6 @@ sed -i "s/CONFIG_TARGET_OPTIMIZATION=\"-Os -pipe -mcpu=cortex-a53\"/CONFIG_TARGE
 # cp -r temp-repo/gn feeds/passwall_packages/gn
 # rm -rf temp-repo
 rm -rf feeds/passwall_packages/gn
-mkdir -p feeds/passwall_packages/gn
 git clone --depth  1 --branch master https://github.com/immortalwrt/packages.git temp-repo
 cp -r temp-repo/devel/gn feeds/passwall_packages
 rm -rf temp-repo
@@ -56,9 +55,8 @@ rm -rf temp-repo
 # popd
 
 rm -rf feeds/packages/libs/libssh
-mkdir -p feeds/packages/libs/libssh
 git clone --depth  1 --branch master https://github.com/openwrt/packages.git temp-repo
-cp -r temp-repo/libs/libssh feeds/packages/libs/libssh
+cp -r temp-repo/libs/libssh feeds/packages/libs
 rm -rf temp-repo
 
 # Fix apk
@@ -118,7 +116,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-poweroff package/lean/luci-app-poweroff
 
 git clone --depth  1 --branch Lede https://github.com/281677160/openwrt-package.git temp-repo
-mkdir -p package/lean/luci-app-poweroff && cp -r temp-repo/luci-app-poweroff package/lean
+cp -r temp-repo/luci-app-poweroff package/lean
 rm -rf temp-repo
 
 # Replace smartdns with the official version
@@ -138,7 +136,7 @@ rm -rf feeds/luci/applications/luci-app-smartdns
 # svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-smartdns package/lean/luci-app-smartdns
 
 git clone --depth  1 --branch master https://github.com/kenzok8/openwrt-packages.git temp-repo
-mkdir -p package/lean/luci-app-smartdns && cp -r temp-repo/luci-app-smartdns package/lean
+cp -r temp-repo/luci-app-smartdns package/lean
 rm -rf temp-repo
 
 # Add luci-app-passwall
