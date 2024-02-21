@@ -43,6 +43,11 @@ sed -i "s/CONFIG_TARGET_OPTIMIZATION=\"-Os -pipe -mcpu=cortex-a53\"/CONFIG_TARGE
 # git clone --depth  1 --branch master https://github.com/kenzok8/small.git temp-repo
 # cp -r temp-repo/gn feeds/passwall_packages/gn
 # rm -rf temp-repo
+rm -rf feeds/passwall_packages/gn
+mkdir -p feeds/passwall_packages/gn
+git clone --depth  1 --branch master https://github.com/immortalwrt/packages.git temp-repo
+cp -r temp-repo/devel/gn feeds/passwall_packages/gn
+rm -rf temp-repo
 
 # Fix libssh
 # pushd feeds/packages/libs
